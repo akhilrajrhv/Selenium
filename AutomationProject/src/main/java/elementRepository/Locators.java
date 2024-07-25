@@ -40,7 +40,6 @@ public class Locators extends BaseClass {
 		WebElement text_fromdatepicker=driver.findElement(By.name("from"));
 		
 		
-		
 	}
 	
 	public void linkText() {
@@ -68,6 +67,7 @@ public class Locators extends BaseClass {
 		WebElement element3=driver.findElement(By.cssSelector("input[class=form-check-input]"));//tag[attribute type=attribute value]-->Method3 for cssSelector
 		WebElement element4=driver.findElement(By.cssSelector("input.form-check-input[type=checkbox]")); //tag.class attribute value[attribute tag=attribute value]
 	}
+	
 	public void xpath()
 	{
 		//Inputform->Checkboc Demo
@@ -87,8 +87,16 @@ public class Locators extends BaseClass {
 		WebElement parent_xpath=driver.findElement(By.xpath("//button=[@class='btn btn-primary']//parent::form"));//child::span[@class='navbar-toggler']"));//Xpath using parent tag
 		WebElement following_xpath=driver.findElement(By.xpath("//button=[@id='button-one']//following:://div=[@id='message-one']"));//Xpath using following tag
 		WebElement index_xpath=driver.findElement(By.xpath("(//form[@method='POST'])[2]"));//Xpath using index
+		
+		
+		WebElement button_getresults=driver.findElement(By.xpath("//button[contains(@id,'two')]"));
+		WebElement button_result=driver.findElement(By.xpath("//button[text()='Show Message']"));
+		WebElement checkbox_xpath=driver.findElement(By.xpath("//div[@class='form-check']//child::input[@id='gridCheck']"));
+		WebElement select_xpath=driver.findElement(By.xpath("//span[@class='select2-selection select2-selection--multiple']//parent::span"));
+		WebElement following=driver.findElement(By.xpath(""));//need to update
+		WebElement index=driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
 	}
-	
+		
 	public static void main(String[] args) {
 		
 		Locators obj=new Locators();
